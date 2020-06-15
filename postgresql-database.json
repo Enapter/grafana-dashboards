@@ -1841,7 +1841,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "pg_stat_database_tup_updated{datname=~\"$datname\", instance=~\"$instance\"} != 0",
+          "expr": "rate(pg_stat_database_tup_updated{datname=~\"$datname\", instance=~\"$instance\"}[3m])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{datname}}",
@@ -1934,7 +1934,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "pg_stat_database_tup_fetched{datname=~\"$datname\", instance=~\"$instance\"} != 0",
+          "expr": "rate(pg_stat_database_tup_fetched{datname=~\"$datname\", instance=~\"$instance\"}[3m])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{datname}}",
@@ -2027,7 +2027,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(pg_stat_database_tup_inserted{datname=~\"$datname\", instance=~\"$instance\"}[1m])",
+          "expr": "rate(pg_stat_database_tup_inserted{datname=~\"$datname\", instance=~\"$instance\"}[3m])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{datname}}",
@@ -2216,7 +2216,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "pg_stat_database_tup_returned{datname=~\"$datname\", instance=~\"$instance\"} != 0",
+          "expr": "rate(pg_stat_database_tup_returned{datname=~\"$datname\", instance=~\"$instance\"}[3m])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{datname}}",
@@ -2402,7 +2402,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "pg_stat_database_tup_deleted{datname=~\"$datname\", instance=~\"$instance\"} != 0",
+          "expr": "rate(pg_stat_database_tup_deleted{datname=~\"$datname\", instance=~\"$instance\"}[3m])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{datname}}",
