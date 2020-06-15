@@ -2027,7 +2027,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "pg_stat_database_tup_inserted{datname=~\"$datname\", instance=~\"$instance\"} != 0",
+          "expr": "rate(pg_stat_database_tup_inserted{datname=~\"$datname\", instance=~\"$instance\"}[1m])",
           "format": "time_series",
           "intervalFactor": 2,
           "legendFormat": "{{datname}}",
