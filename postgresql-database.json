@@ -3061,7 +3061,7 @@
         "multi": false,
         "name": "instance",
         "options": [],
-        "query": "query_result(up{release=\"$release\"})",
+        "query": "query_result(pg_exporter_last_scrape_duration_seconds)",
         "refresh": 1,
         "regex": "/.*instance=\"([^\"]+).*/",
         "skipUrlSync": false,
