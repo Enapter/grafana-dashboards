@@ -183,7 +183,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(cilium_operator_eni_aws_api_duration_seconds_sum[1m])/rate(cilium_operator_eni_aws_api_duration_seconds_count[1m])",
+          "expr": "rate(cilium_operator_eni_aws_api_duration_seconds_sum[2m])/rate(cilium_operator_eni_aws_api_duration_seconds_count[2m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{operation}} {{responseCode}}",
@@ -438,7 +438,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(cilium_operator_eni_resync_total[1m])",
+          "expr": "rate(cilium_operator_eni_resync_total[2m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "operations",
@@ -523,7 +523,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(cilium_operator_ec2_rate_limit_duration_seconds_sum[1m])/rate(cilium_operator_ec2_rate_limit_duration_seconds_count[1m])",
+          "expr": "rate(cilium_operator_ec2_rate_limit_duration_seconds_sum[2m])/rate(cilium_operator_ec2_rate_limit_duration_seconds_count[2m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{operation}}",
@@ -608,7 +608,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg(rate(cilium_operator_eni_interface_creation_ops[1m])) by (subnetId, status)",
+          "expr": "avg(rate(cilium_operator_eni_interface_creation_ops[2m])) by (subnetId, status)",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{status}} ({{subnetId}})",
