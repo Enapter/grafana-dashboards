@@ -203,7 +203,7 @@
   "style": "dark",
   "tags": [
     "icinga2",
-    "graphite"
+    "influxdb"
   ],
   "templating": {
     "list": [
