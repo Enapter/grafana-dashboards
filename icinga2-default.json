@@ -122,7 +122,7 @@
               "type": "fill"
             }
           ],
-          "measurement": "/^$service$/",
+          "measurement": "/^$command$/",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
