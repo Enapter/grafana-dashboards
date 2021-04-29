@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "7.5.2"
+      "version": "7.5.3"
     },
     {
       "type": "panel",
@@ -47,7 +47,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1618238598030,
+  "iteration": 1619691216543,
   "links": [],
   "panels": [
     {
@@ -90,7 +90,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "7.5.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -100,7 +100,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_metric",
+          "alias": "$tag_hostname $tag_metric",
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -112,6 +112,12 @@
             {
               "params": [
                 "metric"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "hostname"
               ],
               "type": "tag"
             },
@@ -215,9 +221,9 @@
         "description": null,
         "error": null,
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "label": null,
-        "multi": false,
+        "multi": true,
         "name": "hostname",
         "options": [],
         "query": "SHOW TAG VALUES WITH KEY = \"hostname\"",
@@ -313,5 +319,5 @@
   "timezone": "",
   "title": "icinga2-default",
   "uid": "zIdGxGwZk",
-  "version": 6
+  "version": 9
 }
