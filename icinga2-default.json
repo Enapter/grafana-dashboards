@@ -47,7 +47,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1619814733094,
+  "iteration": 1619691216543,
   "links": [],
   "panels": [
     {
@@ -158,12 +158,6 @@
               "key": "service",
               "operator": "=~",
               "value": "/^$service$/"
-            },
-            {
-              "condition": "AND",
-              "key": "metric",
-              "operator": "=~",
-              "value": "/^$metric$/"
             }
           ],
           "target": "aliasByNode(icinga2.$hostname.*.$service.$command.perfdata.*.value, 6)"
@@ -290,35 +284,11 @@
         "tagsQuery": "",
         "type": "query",
         "useTags": false
-      },
-      {
-        "allValue": null,
-        "current": {},
-        "datasource": "${DS_INFLUXICINGA}",
-        "definition": "SHOW TAG VALUES WITH KEY = \"metric\" where hostname =~ /^$hostname$/",
-        "description": null,
-        "error": null,
-        "hide": 0,
-        "includeAll": false,
-        "label": null,
-        "multi": true,
-        "name": "metric",
-        "options": [],
-        "query": "SHOW TAG VALUES WITH KEY = \"metric\" where hostname =~ /^$hostname$/",
-        "refresh": 1,
-        "regex": "",
-        "skipUrlSync": false,
-        "sort": 0,
-        "tagValuesQuery": "",
-        "tags": [],
-        "tagsQuery": "",
-        "type": "query",
-        "useTags": false
       }
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
@@ -349,5 +319,5 @@
   "timezone": "",
   "title": "icinga2-default",
   "uid": "zIdGxGwZk",
-  "version": 10
+  "version": 9
 }
